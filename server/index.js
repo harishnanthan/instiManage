@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 import connectDB from "./config/db.js";
 
@@ -8,7 +11,7 @@ import users from "./routes/apis/users.js";
 import exchange from "./routes/apis/exchanges.js";
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Bodyparser middleware
 app.use(
