@@ -4,6 +4,7 @@ import CustomTable from "../../components/CustomTable";
 import FullPageLoader from "../../components/FullPageLoader/FullPageLoader";
 import { EXPENSE_COLUMNS } from "./Home.constants";
 import "./Home.scss";
+import AddExchanges from "../../components/AddExchanges";
 
 export default function Home() {
   const [data, setData] = useState(null);
@@ -44,6 +45,7 @@ export default function Home() {
   return (
     <section>
       {loading && <FullPageLoader />}
+      <AddExchanges fetchData={fetchData} />
       <CustomTable
         actions={actions}
         data={data}
