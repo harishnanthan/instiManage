@@ -1,5 +1,9 @@
 import moment from "moment";
+import { MdOutlineDelete } from 'react-icons/md';
+
 import Phil from "../../components/Phil/Phil";
+
+import './Home.scss';
 
 export const EXPENSE_COLUMNS = [
   {
@@ -48,11 +52,9 @@ export const EXPENSE_COLUMNS = [
     header: "Action",
     key: "action",
     width: 50,
-    cell: () => {
+    cell: ({ _id }, actions) => {
       return (
-        <button className="ICON" onClick={() => console.log("ckicked")}>
-          button
-        </button>
+        <MdOutlineDelete className="icon" onClick={() => actions.delete(_id)} />
       );
     },
   },
