@@ -1,0 +1,1 @@
+export const isObjectNull = obj => (!obj || (obj.constructor !== Object) || !Object.keys(obj).length);

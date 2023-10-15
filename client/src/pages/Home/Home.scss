@@ -1,0 +1,17 @@
+.tableWrapper {
+    table-layout: fixed;
+  
+    th,
+    td {
+      padding: 5px;
+      text-align: left;
+      border: 1px solid var(--background-dark);
+    }
+  }
+  
+  .tableHeader {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--background-secondary);
+  }
